@@ -6,6 +6,7 @@ html {
   width: 100%;
   height: 100vh;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 :root {
@@ -14,6 +15,33 @@ html {
 }
 
 /* utilities */
+.small {
+  display: none;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  z-index: 2;
+}
+
+.small p {
+  cursor: pointer;
+}
+.small p:hover {
+  font-weight: bold;
+}
+
+.small a {
+  text-decoration: none;
+  font-size: 16px;
+  color: white;
+}
+
+.small i {
+  padding-left: 10px;
+}
 
 .sidebar {
   display: flex;
@@ -33,7 +61,7 @@ html {
   filter: contrast(0%);
 }
 
-img:hover {
+.side:hover {
   transform: scale(1.1);
 }
 
@@ -167,7 +195,6 @@ header li {
   color: white;
   position: absolute;
   height: 300px;
-  width: 500px;
   padding-left: 10rem;
   line-height: 1.5;
   z-index: 2;
@@ -208,75 +235,24 @@ header li {
   align-items: center;
   width: 80%;
   height: 100%;
+  padding-bottom: 50px;
 }
 
 .skillset h2 {
   margin: 0;
-  padding: 70px 0 60px 0;
+  padding: 70px 20px 60px 20px;
   color: rgb(179, 177, 177);
-  width: 350px;
+  width: 500px;
   line-height: 2rem;
 }
 
-.skillset .skills {
-  display: flex;
-  align-items: center;
-  position: relative;
-  margin: 20px 0;
-  padding: 10px 10px 10px;
-  background: linear-gradient(#616161 0%, #333 40%, #222);
-  overflow: hidden;
-  border-radius: 8px;
-  border: 2px solid #000;
-  transition: 0.5s;
-  width: 500px;
-}
-
-.skills .name {
-  width: 70px;
-  font-size: 13px;
-  text-align: right;
-  position: relative;
-  color: rgb(179, 177, 177);
-  font-weight: bold;
-}
-
-.skills .value {
-  width: 40px;
-  font-size: 13px;
-  text-align: left;
-  position: relative;
-  color: rgb(179, 177, 177);
-  font-weight: bold;
-}
-
-.skillset .skills .percent {
-  width: calc(100% - 110px);
-  position: relative;
-  height: 10px;
-  margin: 0 10px;
-  border-radius: 10px;
-  background: #151515;
-  box-shadow: inset 0 0 10px #000;
-  overflow: hidden;
-}
-
-.skillset .skills .percent .progress {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 90%;
-  height: 100%;
-  border-radius: 10px;
-  background: var(--red);
-  box-shadow: inset 0 0 9px #000;
-  animation: animate 2s ease-in-out forwards;
-}
-
-@keyframes animate {
-  from {
-    width: 0;
-  }
+.mix {
+  width: 400px;
+  height: 350px;
+  background-image: url(../images/mix.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* portfolio */
@@ -320,7 +296,7 @@ header li {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 35%;
+  width: 350px;
   height: 40px;
   color: rgb(179, 177, 177);
   text-transform: uppercase;
@@ -431,13 +407,9 @@ input[type="submit"] {
 
 .findme {
   display: flex;
-  justify-content: center;
-  width: 100%;
+  justify-content: space-evenly;
+  width: 50%;
   height: 100%;
-}
-
-#first {
-  padding-left: 0;
 }
 
 /* footer */
@@ -466,11 +438,14 @@ input[type="submit"] {
   .description {
     font-size: 18px;
     letter-spacing: 3px;
-    width: 30%;
+    width: 300px;
   }
   .works {
     grid-gap: 3rem;
     padding: 100px 50px;
+  }
+  .skillset h2 {
+    width: 450px;
   }
 }
 
@@ -489,9 +464,8 @@ input[type="submit"] {
   .intro h3 {
     font-size: 1.4rem;
   }
-
-  .skillset .skills {
-    width: 300px;
+  .skillset h2 {
+    width: 100%;
   }
   .wrap {
     width: 280px;
@@ -503,6 +477,25 @@ input[type="submit"] {
     font-size: 20px;
   }
   .description {
-    width: 40%;
+    width: 250px;
+  }
+  .works {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .col {
+    grid-auto-rows: minmax(150px, auto);
+  }
+  .findme {
+    height: 30px;
+  }
+  .small {
+    display: flex;
+  }
+  header nav {
+    display: none;
+  }
+  .mix {
+    width: 300px;
+    height: 250px;
   }
 }
