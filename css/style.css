@@ -307,7 +307,7 @@ header li {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-.center{
+.center {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -386,7 +386,7 @@ header li {
 }
 
 .wrap {
-  width: 30%;
+  width: 350px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -451,7 +451,8 @@ input[type="submit"] {
 }
 
 .footer p {
-  color: rgb(105, 105, 105);
+  color: var(--black);
+  font-weight: 600;
 }
 
 @media screen and (max-width: 800px) {
@@ -475,13 +476,9 @@ input[type="submit"] {
 
 @media screen and (max-width: 500px) {
   .intro {
-    color: white;
-    position: absolute;
-    height: 300px;
-    width: 500px;
+    width: 300px;
     padding-left: 3rem;
     line-height: 1.5;
-    z-index: 2;
   }
   .intro h1 {
     font-size: 2.5rem;
@@ -495,17 +492,17 @@ input[type="submit"] {
 
   .skillset .skills {
     width: 300px;
-}
-.wrap {
-  width: 280px;
-}
-.contact h2 {
-  font-size: 30px;
-}
-.contact h3 {
-  font-size: 20px;
-}
-.description {
-  width: 40%;
-}
+  }
+  .wrap {
+    width: 280px;
+  }
+  .contact h2 {
+    font-size: 30px;
+  }
+  .contact h3 {
+    font-size: 20px;
+  }
+  .description {
+    width: 40%;
+  }
 }

@@ -14,18 +14,15 @@
             <nav>
                 <ul>
                     <li class="current"><a href="#">home</a></li>
-                    <li><a href="#">about</a></li>
-                    <li><a href="#">portfolio</a></li>
-                    <li><a href="#">contact</a></li>
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#portfolio">portfolio</a></li>
+                    <li><a href="#contact">contact</a></li>
                 </ul>
             </nav>
             </div>
         </header>
 
-       
-
     <section id="showcase">
-        
 
         <div class="intro">
             <h1>Tamas Acs</h1>
@@ -33,18 +30,17 @@
             <span class="txt-type" data-wait="1000" data-words='[" Designer", " Creator", " Developer"]'></span>
             </h3>
             <p>Learning Javascript and React</p>
-            <a href="#"><button class="btn">about me</button></a>
+            <a href="#about"><button class="btn">about me</button></a>
         </div>
 
 
         <div class="sidebar">
-            <a href="#"><img src="./images/github.png" class="side"></a>
-            <a href="#"><img src="./images/linkdin.png" class="side"></a>
+            <a href="https://github.com/TamasAcs" target="_blank"><img src="./images/github.png" class="side"></a>
+            <a href="https://www.linkedin.com/in/tamas-acs-943540201/" target="_blank"><img src="./images/linkdin.png" class="side"></a>
             </div>
     </section>
     
-
-    <section class="about">
+    <section id="about" class="about">
         <div class="skillset">
             <h2>I'm a self taught developer Like to learn new things and gain more skills</h2>
                 <div class="skills">
@@ -85,7 +81,7 @@
         </div>
     </section>
 
-    <section class="portfolio">
+    <section id="portfolio" class="portfolio">
         
             <div class="center"><h2 class="description">My latest works</h2></div>
         
@@ -99,20 +95,20 @@
         </div>
     </section>
 
-    <section class="contact">
+    <section id="contact" class="contact">
         <h2>Contact Me</h2>
-        <div class="wrap">
+        <form class="wrap" method="POST" data-netlify="true">
             <p>Name</p>
             <input type="text" name="name" placeholder="Name" required>
             <p>Email</p>
             <input type="email" name="email" placeholder="Email" required>
             <textarea name="text" rows="4" cols="40" placeholder="Enter message..." required></textarea>
             <input type="submit" value="Send message">
-        </div>
+        </form>
         <h3>or find me on</h3>
         <div class="findme">
-            <a href="#"><img id="first" src="./images/github.png" class="find"></a>
-            <a href="#"><img src="./images/linkdin.png" class="find"></a>
+            <a href="https://github.com/TamasAcs" target="_blank"><img id="first" src="./images/github.png" class="find"></a>
+            <a href="https://www.linkedin.com/in/tamas-acs-943540201/" target="_blank"><img src="./images/linkdin.png" class="find"></a>
         </div>
     </section>
 
