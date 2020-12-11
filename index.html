@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>Home</title>
@@ -26,13 +27,13 @@
 
     <section id="showcase">
 
-        <div class="intro">
+        <div class="intro" >
             <h1>Tamas Acs</h1>
-            <h3>The 
+            <h3 data-aos="fade-right">The 
             <span class="txt-type" data-wait="1000" data-words='[" Designer", " Creator", " Developer"]'></span>
             </h3>
             <p>Learning Javascript and React</p>
-            <a href="#about"><button class="btn">about me</button></a>
+            <a href="#about"><button class="btn" data-aos="fade-up">about me</button></a>
         </div>
 
 
@@ -49,16 +50,39 @@
     
     <section id="about" class="about">
         <div class="skillset">
-            <h2>I'm a self taught web developer, started to learn in 2020 
-                <br>Like to learn new things and gain more skills</h2>
-                <div class="mix"></div>
-                
+            <div id="describe"><h1 class="describe" data-aos="fade-right">About</h1></div>
+            <h2 data-aos="fade-up">I'm a self taught web developer, started to learn in 2020 
+                <br>Like to learn new things and gain more skills
+                <br>I have serious passion for UI effects, animations and creating intuitive, dynamic user experiences
+                <br><a href="#contact">Let's make something special.</a></h2>
+                <div class="mix">
+                <div class="component" data-aos="zoom-in">
+                    <div class="background"><img id="mix" src="./images/speed.png"></div>
+                        <h2>Fast</h2>
+                        <p>Fast load times and lag free interaction, my highest priority</p>
+                </div>
+                <div class="component" data-aos="zoom-in">
+                <div class="background"><img id="mix" src="./images/resp.png"></div>
+                <h2>Responsive</h2>
+                        <p>My layouts will work on any device, big or small</p>
+                </div>
+                <div class="component" data-aos="zoom-in">
+                <div class="background"><img id="mix" src="./images/bulb.png"></div>
+                <h2>Intuitive</h2>
+                        <p>Strong preference for easy to use, intuitive UX/UI</p>
+                </div>
+                <div class="component" data-aos="zoom-in">
+                <div class="background"><img id="mix" src="./images/launch.png"></div>
+                <h2>Dynamic</h2>
+                        <p>Websites don't have to be static, I love making pages come to life</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <section id="portfolio" class="portfolio">
         
-            <div class="center"><h2 class="description">My latest works</h2></div>
+            <div class="center"><h2 class="description" data-aos="fade-left">My latest works</h2></div>
         
         <div class="works">
                 <div class="col">1</div>
@@ -71,11 +95,11 @@
     </section>
 
     <section id="contact" class="contact">
-        <h2>Contact Me</h2>
-        <form class="wrap" method="POST" data-netlify="true">
-            <p>Name</p>
+        <h2 data-aos="zoom-in">Contact Me</h2>
+        <form class="wrap" method="POST" data-netlify="true" data-aos="flip-up">
+            <p>Name (required)</p>
             <input type="text" name="name" placeholder="Name" required>
-            <p>Email</p>
+            <p>Email (required)</p>
             <input type="email" name="email" placeholder="Email" required>
             <textarea name="text" rows="4" cols="40" placeholder="Enter message..." required></textarea>
             <input type="submit" value="Send message">
@@ -92,5 +116,13 @@
     </footer>
 
     <script src="./css/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous"></script>
+    <script>
+        AOS.init({
+        delay: 200,
+        duration: 1200,
+        once: false,
+    });
+      </script>
 </body>
 </html>

@@ -46,18 +46,18 @@ html {
 .sidebar {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   right: 0;
   align-items: flex-end;
   position: absolute;
   width: 20%;
+  height: 200px;
   padding-right: 30px;
   z-index: 2;
 }
 
 .side {
   width: 30px;
-  height: 30px;
-  padding-bottom: 45px;
   filter: contrast(0%);
 }
 
@@ -218,7 +218,7 @@ header li {
 /* about */
 
 .about {
-  height: 600px;
+  height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -227,33 +227,110 @@ header li {
   background-color: var(--black);
 }
 
+#describe {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 70px 0 20px 0;
+}
+
+.describe {
+  padding: 0;
+  color: rgb(179, 177, 177);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 40px;
+  text-transform: uppercase;
+  font-size: 28px;
+  letter-spacing: 5px;
+  font-weight: bold;
+  z-index: 2;
+  border-bottom: 3px solid var(--red);
+  border-top: 3px solid var(--red);
+}
+
 .skillset {
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 80%;
+  width: 100%;
   height: 100%;
-  padding-bottom: 50px;
+  margin: 0px 20px 50px 20px;
+}
+
+.skillset a {
+  text-decoration: none;
+  font-size: 15px;
 }
 
 .skillset h2 {
   margin: 0;
-  padding: 70px 20px 60px 20px;
+  padding: 20px 20px 60px 20px;
   color: rgb(179, 177, 177);
-  width: 500px;
-  line-height: 2rem;
+  width: 700px;
+  line-height: 3rem;
 }
 
+.mix {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 300px;
+  width: 80%;
+  padding: 0 30px;
+}
+
+.component {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  width: 150px;
+}
+
+.component h2 {
+  padding: 10px 0 10px 0;
+}
+
+.component p {
+  padding-bottom: 10px;
+  margin: 0;
+  color: rgb(179, 177, 177);
+}
+
+#mix {
+  height: 50px;
+  width: 50px;
+  filter: contrast(0%);
+}
+
+.background {
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  background-color: var(--red);
+  width: 90px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*
 .mix {
   width: 400px;
   height: 350px;
   background-image: url(../images/mix.png);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 }
+*/
 
 /* portfolio */
 
@@ -388,7 +465,19 @@ textarea {
 input {
   margin: 15px;
   width: 90%;
-  border: 1px solid black;
+  outline: none;
+}
+
+input[type="text"],
+input[type="email"] {
+  border: none;
+  background-color: darkgray;
+  border-bottom: 2px solid var(--red);
+  outline: none;
+}
+
+textarea {
+  outline: none;
 }
 
 input[type="submit"] {
@@ -396,6 +485,7 @@ input[type="submit"] {
   height: 25px;
   border-radius: 4px;
   margin-top: 20px;
+  cursor: pointer;
 }
 
 .find {
@@ -410,6 +500,10 @@ input[type="submit"] {
   justify-content: space-evenly;
   width: 50%;
   height: 100%;
+}
+
+.findme a {
+  height: 15px;
 }
 
 /* footer */
@@ -428,10 +522,12 @@ input[type="submit"] {
 }
 
 @media screen and (max-width: 800px) {
+  .about {
+    height: 120vh;
+  }
   .intro {
     padding-left: 6rem;
   }
-
   .intro h1 {
     font-size: 3.5rem;
   }
@@ -445,11 +541,38 @@ input[type="submit"] {
     padding: 100px 50px;
   }
   .skillset h2 {
-    width: 450px;
+    width: 80%;
+    font-size: 18px;
+    line-height: 2rem;
+    padding-bottom: 30px;
+  }
+  .describe {
+    height: 40px;
+    padding: 0;
+    width: 150px;
+    font-size: 22px;
+    letter-spacing: 4px;
+    font-weight: bold;
+  }
+  .mix {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    justify-content: space-around;
+    grid-gap: 30px;
+  }
+  .component p {
+    font-size: 14px;
+  }
+  .component h2 {
+    padding-bottom: 10px;
   }
 }
 
 @media screen and (max-width: 500px) {
+  .about {
+    height: 130vh;
+  }
   .intro {
     width: 300px;
     padding-left: 3rem;
@@ -465,16 +588,21 @@ input[type="submit"] {
     font-size: 1.4rem;
   }
   .skillset h2 {
-    width: 100%;
+    width: 80%;
+    padding-bottom: 20px;
   }
   .wrap {
     width: 280px;
+  }
+  .contact {
+    height: 80%;
   }
   .contact h2 {
     font-size: 30px;
   }
   .contact h3 {
     font-size: 20px;
+    padding-top: 30px;
   }
   .description {
     width: 250px;
@@ -494,8 +622,23 @@ input[type="submit"] {
   header nav {
     display: none;
   }
-  .mix {
-    width: 300px;
-    height: 250px;
+  #describe {
+    padding: 40px 0 20px 0;
+  }
+  .background {
+    width: 80px;
+    height: 70px;
+  }
+  #mix {
+    height: 50px;
+    width: 50px;
+    filter: contrast(0%);
+  }
+  #mix {
+    height: 40px;
+    width: 40px;
+  }
+  .portfolio {
+    height: 110%;
   }
 }
