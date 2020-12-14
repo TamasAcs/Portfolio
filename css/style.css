@@ -281,7 +281,7 @@ header li {
   justify-content: space-between;
   height: 300px;
   width: 80%;
-  padding: 0 30px;
+  padding: 90px 30px 0 30px;
 }
 
 .component {
@@ -425,6 +425,7 @@ header li {
   text-transform: uppercase;
   letter-spacing: 2px;
   color: rgb(179, 177, 177);
+  padding-top: 80px;
 }
 
 .contact h3 {
@@ -463,6 +464,7 @@ input {
   margin: 15px;
   width: 90%;
   outline: none;
+  font-size: 18px;
 }
 
 input[type="text"],
@@ -498,6 +500,7 @@ input[type="submit"] {
   justify-content: space-evenly;
   width: 50%;
   height: 100%;
+  padding-top: 50px;
 }
 
 .findme a {
@@ -575,10 +578,10 @@ input[type="submit"] {
   }
 }
 
-@media screen and (max-width: 600px){
-.about{
-  height: 130vh;
-}
+@media screen and (max-width: 600px) {
+  .about {
+    height: 130vh;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -657,41 +660,40 @@ input[type="submit"] {
   .portfolio {
     height: 210vh;
   }
-  [data-aos=fade-left] {
-    transform: translate3d(0,0,0);
+  [data-aos="fade-left"] {
+    transform: translate3d(0, 0, 0);
   }
 }
 
-
 @media screen and (max-width: 350px) {
-[data-aos=fade-left] {
-  transform: translate3d(0,0,0);
-}
-.mix {
-  grid-template-columns: auto;
-}
-.about{
-  height: 190vh;
-}
-.sidebar {
-  flex-direction: row;
-  width: 50%;
-  justify-content: space-between;
-}
-.contact h2{
-  padding-top: 0;
-}
-.contact h3{
-  padding-top: 0;
-  padding-bottom: 20px;
-}
-.contact{
-  height: 70%;
-}
-.portfolio{
-  height: 210vh;
-}
-.wrap{
-  margin-bottom: 0;
-}
+  [data-aos="fade-left"] {
+    transform: translate3d(0, 0, 0);
+  }
+  .mix {
+    grid-template-columns: auto;
+  }
+  .about {
+    height: 190vh;
+  }
+  .sidebar {
+    flex-direction: row;
+    width: 50%;
+    justify-content: space-between;
+  }
+  .contact h2 {
+    padding-top: 0;
+  }
+  .contact h3 {
+    padding-top: 0;
+    padding-bottom: 20px;
+  }
+  .contact {
+    height: 70%;
+  }
+  .portfolio {
+    height: 210vh;
+  }
+  .wrap {
+    margin-bottom: 0;
+  }
 }
