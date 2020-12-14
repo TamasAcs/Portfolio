@@ -47,12 +47,11 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  right: 0;
+  right: 30px;
   align-items: flex-end;
   position: absolute;
   width: 20%;
   height: 200px;
-  padding-right: 30px;
   z-index: 2;
 }
 
@@ -320,17 +319,6 @@ header li {
   justify-content: center;
 }
 
-/*
-.mix {
-  width: 400px;
-  height: 350px;
-  background-image: url(../images/mix.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-*/
-
 /* portfolio */
 
 .portfolio {
@@ -343,7 +331,6 @@ header li {
   justify-content: center;
   position: relative;
   width: 100%;
-  height: 100%;
   margin: 0;
   padding: 50px 0 50px 0;
 }
@@ -401,14 +388,23 @@ header li {
   grid-auto-rows: minmax(200px, auto);
   align-items: center;
   justify-content: center;
+  width: 100%;
+  height: 100%;
   border: 2px solid rgb(179, 177, 177);
-  color: rgb(179, 177, 177);
-  background-color: rgb(160, 160, 160, 0.2);
+  background-color: rgb(0, 0, 0, 0.9);
+}
+
+.pic1 {
+  background-image: url(../images/p1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .col:hover {
-  transform: scale(1.1);
+  transform: scale(1.3);
   box-shadow: 5px 3px 4px rgb(179, 177, 177, 0.6);
+  cursor: pointer;
 }
 
 /* contact */
@@ -477,6 +473,7 @@ input[type="email"] {
 
 textarea {
   outline: none;
+  resize: none;
 }
 
 input[type="submit"] {
@@ -520,6 +517,13 @@ input[type="submit"] {
   font-weight: 600;
 }
 
+@media screen and (max-width: 1100px) {
+  .works {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+  }
+}
+
 @media screen and (max-width: 800px) {
   .about {
     height: 120vh;
@@ -537,7 +541,8 @@ input[type="submit"] {
   }
   .works {
     grid-gap: 3rem;
-    padding: 100px 50px;
+    padding: 100px 100px;
+    grid-template-columns: repeat(1, 1fr);
   }
   .skillset h2 {
     width: 80%;
@@ -607,10 +612,11 @@ input[type="submit"] {
     width: 250px;
   }
   .works {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    padding: 100px 50px;
   }
   .col {
-    grid-auto-rows: minmax(150px, auto);
+    grid-auto-rows: minmax(200px, auto);
   }
   .findme {
     height: 30px;
@@ -638,6 +644,26 @@ input[type="submit"] {
     width: 40px;
   }
   .portfolio {
-    height: 110%;
+    height: 210vh;
   }
+  [data-aos=fade-left] {
+    transform: translate3d(0,0,0);
+  }
+}
+
+
+@media screen and (max-width: 350px) {
+[data-aos=fade-left] {
+  transform: translate3d(0,0,0);
+}
+.mix {
+  grid-template-columns: auto;
+}
+.about{
+  height: 180vh;
+}
+.sidebar {
+  flex-direction: row;
+  width: 80%;
+}
 }
