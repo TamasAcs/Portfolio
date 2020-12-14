@@ -47,11 +47,11 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  right: 30px;
+  right: 70px;
   align-items: flex-end;
   position: absolute;
   width: 20%;
-  height: 200px;
+  height: 300px;
   z-index: 2;
 }
 
@@ -269,7 +269,7 @@ header li {
 
 .skillset h2 {
   margin: 0;
-  padding: 20px 20px 40px 20px;
+  padding: 50px 20px 40px 20px;
   color: rgb(179, 177, 177);
   width: 700px;
   line-height: 3rem;
@@ -295,6 +295,7 @@ header li {
 
 .component h2 {
   padding: 10px 0 10px 0;
+  width: 150px;
 }
 
 .component p {
@@ -442,6 +443,7 @@ header li {
   background: darkgrey;
   padding-top: 20px;
   border-radius: 5px;
+  margin-bottom: 40px;
 }
 
 .wrap p {
@@ -573,6 +575,12 @@ input[type="submit"] {
   }
 }
 
+@media screen and (max-width: 600px){
+.about{
+  height: 130vh;
+}
+}
+
 @media screen and (max-width: 500px) {
   .about {
     height: 130vh;
@@ -597,16 +605,19 @@ input[type="submit"] {
   }
   .wrap {
     width: 280px;
+    margin-bottom: 0;
   }
   .contact {
     height: 80%;
   }
   .contact h2 {
     font-size: 30px;
+    padding-top: 0;
   }
   .contact h3 {
     font-size: 20px;
-    padding-top: 30px;
+    padding-top: 0;
+    padding-bottom: 0;
   }
   .description {
     width: 250px;
@@ -660,10 +671,27 @@ input[type="submit"] {
   grid-template-columns: auto;
 }
 .about{
-  height: 180vh;
+  height: 190vh;
 }
 .sidebar {
   flex-direction: row;
-  width: 80%;
+  width: 50%;
+  justify-content: space-between;
+}
+.contact h2{
+  padding-top: 0;
+}
+.contact h3{
+  padding-top: 0;
+  padding-bottom: 20px;
+}
+.contact{
+  height: 70%;
+}
+.portfolio{
+  height: 210vh;
+}
+.wrap{
+  margin-bottom: 0;
 }
 }
