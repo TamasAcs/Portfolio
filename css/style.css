@@ -577,6 +577,9 @@ input[type="submit"] {
   .component h2 {
     padding-bottom: 10px;
   }
+  .col{
+    height: 250px;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -587,7 +590,7 @@ input[type="submit"] {
 
 @media screen and (max-width: 500px) {
   .about {
-    height: 130vh;
+    height: 140vh;
   }
   .intro {
     width: 300px;
@@ -631,7 +634,7 @@ input[type="submit"] {
     padding: 100px 50px;
   }
   .col {
-    grid-auto-rows: minmax(200px, auto);
+    height: 150px;
   }
   .findme {
     height: 30px;
@@ -683,7 +686,7 @@ input[type="submit"] {
     grid-template-columns: auto;
   }
   .about {
-    height: 190vh;
+    height: 240vh;
   }
   .sidebar {
     flex-direction: row;
@@ -698,10 +701,11 @@ input[type="submit"] {
     padding-bottom: 20px;
   }
   .contact {
-    height: 70%;
+    height: 100%;
   }
   .portfolio {
-    height: 210vh;
+    height: 240vh;
+    padding: 50px 0 0 0;
   }
   .wrap {
     margin-bottom: 0;
