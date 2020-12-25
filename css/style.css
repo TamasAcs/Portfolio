@@ -666,7 +666,7 @@ input[type="submit"] {
     padding: 0px 30px;
   }
   .portfolio {
-    height: 230vh;
+    height: 200vh;
   }
   [data-aos="fade-left"] {
     transform: translate3d(0, 0, 0);
