@@ -49,3 +49,17 @@ class TypeWriter {
     const wait = txtElement.getAttribute('data-wait');
     new TypeWriter(txtElement, words, wait);
   }
+
+
+
+  
+
+const countEl = document.getElementById("count");
+
+function updateVisitorCount() {
+    fetch("https://api.countapi.xyz/update/tamasacs.netlify.app/counter/?amount=1").then(res => res.json()).then(res => {
+        countEl.innerHTML = res.value;
+    })
+}
+
+updateVisitorCount();
