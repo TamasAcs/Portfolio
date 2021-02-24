@@ -372,7 +372,7 @@ header li {
   filter:brightness(0.5);
 }
 .pic1 {
-  background-image: url(../images/p1.png);
+  background-image: url(../images/uiblog.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -397,6 +397,12 @@ header li {
 }
 .pic5{
   background-image: url(../images/mixed_projects.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.pic6{
+  background-image: url(../images/uiebike.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
