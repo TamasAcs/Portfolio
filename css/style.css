@@ -74,7 +74,7 @@ html {
 }
 .highlight,
 .current a {
-  color: rgb(227, 77, 77);
+  color: rgb(160, 40, 40);
 }
 .btn {
   height: 2rem;
@@ -458,12 +458,8 @@ header li {
   align-items: center;
   justify-content: center;
 }
-label {
-  display: inherit;
-  width: 90%;
-}
 textarea {
-  width: 100%;
+  width: 90%;
   margin-top: 15px;
   padding-left: 5px;
   letter-spacing: 1px;
@@ -472,8 +468,8 @@ textarea {
 }
 input[type="text"],
 input[type="email"] {
-  margin: 15px 0;
-  width: 100%;
+  margin: 15px;
+  width: 90%;
   font-size: 18px;
   border: none;
   background-color: darkgray;
@@ -484,10 +480,8 @@ input[type="email"] {
 input::placeholder {
   letter-spacing: 1px;
 }
+input:focus,
 input:hover {
-  border-bottom: 3px solid var(--red);
-}
-input:focus {
   border-bottom: 3px solid var(--red);
 }
 .subbtn {
